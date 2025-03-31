@@ -1,21 +1,15 @@
+import Nav from "../components/nav";
+
 const Auditorium = () => {
     return (
-        <div className="grid grid-cols-6 grid-rows-12 gap-4 min-h-screen bg-gray-900 text-white">
+        <div className="grid grid-cols-1 md:grid-cols-5 grid-rows-12 gap-4 min-h-screen bg-gray-900 text-white">
             {/* Sidebar */}
-            <div className="col-span-2 row-span-12 bg-gray-800 p-4">
-                <div className="flex flex-col space-y-4">
-                    <div className="text-center text-xl font-bold">Gestión de Conferencias</div>
-                    <nav className="flex flex-col space-y-2">
-                        <a href="#" className="text-gray-300 hover:text-white">Inicio</a>
-                        <a href="#" className="text-gray-300 hover:text-white">Conferencistas</a>
-                        <a href="#" className="text-gray-300 hover:text-white">Auditorios</a>
-                        <a href="#" className="text-gray-300 hover:text-white">Reservas</a>
-                    </nav>
-                </div>
+            <div className="col-span-1 row-span-12">
+                <Nav />
             </div>
 
             {/* Main Content */}
-            <div className="col-span-4 col-start-3 row-span-12 p-4">
+            <div className="col-span-1 md:col-span-4 col-start-1 md:col-start-2 row-span-12 p-4">
                 {/* Header */}
                 <div className="bg-gray-700 p-4 rounded-lg mb-4">
                     <h1 className="text-2xl font-bold">Gestión de Auditorios</h1>
