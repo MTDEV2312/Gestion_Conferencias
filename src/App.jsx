@@ -4,18 +4,25 @@ import Dashboard from './layouts/dashboard.jsx'
 import Conferences from './pages/conferences.jsx';
 import Speakers from './pages/speakers.jsx';
 import Auditorium from './pages/auditorium.jsx';
+import { AuthProvider } from './context/authProvider.jsx';
+import { PrivateRoute } from './routers/privateRoutes.jsx';
 
 function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Dashboard />} />
-        <Route path="/conferences" element={<Conferences />} />
-        <Route path="/speakers" element={<Speakers />} />
-        <Route path="/auditorium" element={<Auditorium />} />
-      </Routes>
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>} />
+          <Route path="/conferences" element={<Conferences />} />
+          <Route path="/speakers" element={<Speakers />} />
+          <Route path="/auditorium" element={<Auditorium />} />
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   )
 }
