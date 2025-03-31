@@ -5,13 +5,10 @@ const Conferences = () => {
             <div className="col-span-1 row-span-12 bg-gray-800 p-4 rounded-lg shadow-lg">
                 <div className="text-center text-xl font-bold mb-6">Gestión de Conferencias</div>
                 <nav className="flex flex-col space-y-4">
-                    <a href="#" className="text-gray-300 hover:text-white">Dashboard</a>
-                    <a href="#" className="text-gray-300 hover:text-white">Conferences</a>
-                    <a href="#" className="text-gray-300 hover:text-white">Speakers</a>
-                    <a href="#" className="text-gray-300 hover:text-white">Auditoriums</a>
-                    <a href="#" className="text-gray-300 hover:text-white">Reservations</a>
-                    <a href="#" className="text-gray-300 hover:text-white">Users</a>
-                    <a href="#" className="text-gray-300 hover:text-white">Configuration</a>
+                    <a href="#" className="text-gray-300 hover:text-white">Inicio</a>
+                    <a href="#" className="text-gray-300 hover:text-white">Conferencistas</a>
+                    <a href="#" className="text-gray-300 hover:text-white">Auditorios</a>
+                    <a href="#" className="text-gray-300 hover:text-white">Reservas</a>
                 </nav>
             </div>
 
