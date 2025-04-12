@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react"
+import axios from 'axios';
 
 const AuthContext = createContext()
 
@@ -6,18 +7,23 @@ const AuthProvider = ({ children }) => {
     const [auth, setAuth] = useState({})
 
     useEffect(() => {
-        const token = localStorage.getItem('token')
-        if(token)
-        {
-            setAuth({token})
+        const token = localStorage.getItem('token');
+        if (token) {
+            setAuth({ token });
         }
-    }, [])
+    }, []);
+
+    const logout = () => {
+        localStorage.removeItem('token');
+        setAuth({});
+    };
     
     return (
         <AuthContext.Provider value={
             {
                 auth,
-                setAuth              
+                setAuth,
+                logout
             }
         }>
             {children}
